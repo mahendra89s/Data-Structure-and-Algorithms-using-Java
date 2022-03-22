@@ -160,9 +160,9 @@ class DoublyLinkedList {
         // System.out.println();
         // list.printList();
 
-        list.deleteFromIndex(3);
-        System.out.println();
-        list.printList();
+        // list.deleteFromIndex(3);
+        // System.out.println();
+        // list.printList();
 
     }
 }
