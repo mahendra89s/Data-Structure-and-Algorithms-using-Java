@@ -60,5 +60,11 @@ class CircularQueue {
         q.enqueue(30);
         q.enqueue(40);
         q.display();
+
+        q.dequeue();
+        System.out.println();
+        q.display();
+        q.enqueue(70);
+        q.display();
     }
 }
