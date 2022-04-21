@@ -130,4 +130,23 @@ class LinkedList{
         printList(list);
     }
 
+    //reverse the linked list
+    public static LinkedList reverse(LinkedList list){
+        Node currNode = list.head;
+        Node prev = null;
+        Node next = currNode.next;
+        if(list.head == null){
+            return null;
+        }
+        while(currNode != null){
+            currNode.next = prev;
+            prev = currNode;
+            currNode = next;
+            if(next != null){
+                next = next.next;
+            }
+        }
+        return prev;
+    }
+
 }
