@@ -85,6 +85,25 @@ public class LevelOrderTraversal {
 
     }
 
+    public static void LevelOrderNew(Node root){
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        while(!q.isEmpty()){
+            int n = q.size();
+            for(int i=1; i<=n;i++){
+                Node temp = q.poll();
+                System.out.print(temp.data + " ");
+                if(temp.left!=null){
+                    q.add(temp.left);
+                }
+                if(temp.right != null){
+                    q.add(temp.right);
+                }
+            }
+            System.out.println();
+        }
+    }
+
     public static int countNodes(Node root){
         if(root == null){
             return 0;
@@ -129,6 +148,9 @@ public class LevelOrderTraversal {
 
         System.out.println("-------");
         levelOrder(root);
+
+        System.out.println("------- New Level Order");
+        LevelOrderNew(root);
         System.out.println("-------");
 
         System.out.println(countNodes(root));
